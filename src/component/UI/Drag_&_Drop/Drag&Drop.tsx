@@ -1,4 +1,4 @@
-import {Container} from "./Drag&Drop.style";
+import {Container} from "./Drag&Drop.styled";
 import React, {useState, ChangeEvent, useRef, FC, SetStateAction, Dispatch, useEffect} from "react";
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faXmark} from '@fortawesome/free-solid-svg-icons'

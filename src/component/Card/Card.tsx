@@ -1,5 +1,5 @@
 import {FC} from "react";
-import {Container, Content, Description, ImageWrapper, Numeration, Title} from "./Card.style";
+import {Container, Content, Description, ImageWrapper, Numeration, Title} from "./Card.styled";
 
 interface CardProps{
   title:string,

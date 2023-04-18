@@ -1,5 +1,5 @@
 import DragAndDrop from "../UI/Drag_&_Drop/Drag&Drop";
-import {Button, Container, Input, Text, TextArea} from "./Form.style";
+import {Button, Container, Input, Text, TextArea} from "./Form.styled";
 import React, {ChangeEvent, Dispatch, FC, FormEvent, SetStateAction, useState} from "react";
 
 const initValue = {

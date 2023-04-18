@@ -1,8 +1,8 @@
-import {Button, CancelButton, Container, Content, EmptyContainer, Text} from "./Nav.style";
+import {Button, CancelButton, Container, Content, EmptyContainer, Text} from "./Nav.styled";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faArrowRight, faXmark} from '@fortawesome/free-solid-svg-icons'
 import Form from "../Form/Form";
-import React, {Dispatch, FC, SetStateAction} from "react";
+import React, {Dispatch, FC, SetStateAction, useState} from "react";
 import {useToggle} from "usehooks-ts";
 
 
@@ -19,14 +19,18 @@ interface NavProps{
 
 const Nav:FC<NavProps> = ({addData}) => {
   const [value, toggle] = useToggle(false)
+  const [firstTouch, setFirstTouch] = useState(false)
 
   return(
 
       <Container>
         <Text>Card App</Text>
-        <Button onClick={toggle}><FontAwesomeIcon icon={faArrowRight}/> </Button>
+        <Button onClick={() => {
+          toggle()
+          setFirstTouch(true)
+        }}><FontAwesomeIcon icon={faArrowRight}/> </Button>
         {value && <EmptyContainer onClick={toggle}/>}
-        <Content className={value ? "show" : "hide"}>
+        <Content className={ firstTouch ? value ? "show" : "hide" : ""}>
           <Form addData={addData}/>
           <CancelButton onClick={toggle}><FontAwesomeIcon icon={faXmark}/></CancelButton>
         </Content>

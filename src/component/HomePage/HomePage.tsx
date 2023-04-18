@@ -1,5 +1,5 @@
 import Card from "../Card/Card";
-import {Container, Wrapper} from "./HomePage.style";
+import {Container, Wrapper} from "./HomePage.styled";
 import {FC} from "react";
 
 
